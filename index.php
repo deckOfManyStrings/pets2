@@ -32,9 +32,10 @@
     }
     );
 
-    $f3->route('GET /pets/order', function ($f3, $params)
+    $f3->route('GET /pets/order', function ()
     {
-        echo "<h3> Form 1</h3><br>";
+        $template = new Template();
+        echo $template->render('views/form1.html');
     }
     );
 
