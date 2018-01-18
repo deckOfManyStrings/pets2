@@ -52,9 +52,17 @@
     }
     );
 
-    $f3->route('GET /pets/results', function ($f3, $params)
+    $f3->route('POST /pets/results', function ($f3, $params)
     {
-        echo "<h3> Results</h3><br>";
+        $_SESSION['color'] = $_POST['color'];
+
+        $f3->set('animal', $_SESSION['animal']);
+
+        $f3->set('color', $_SESSION['color']);
+
+        $template = new Template();
+        echo $template->render('views/result.html');
+
     }
     );
 
