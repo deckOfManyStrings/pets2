@@ -5,6 +5,22 @@
     <title>Title</title>
 </head>
 <body>
+    <label>Pet name</label>
+    <input name="petName" value="petName" >
+
+    <label>Pet Color</label>
+
+    <select ckass="form-control" name="pet-color" id="pet-color">
+    <option>--Select--</option>
+    <repeat group ="{{ @colors }}" value = "{{ @color }}">
+        <option>{{ @color }}</option>
+    </repeat>
+    </select>
+
+    <label>Pet type</label>
+    <input name="petType" value="petType" >
+
+    <button name="submit">Submit</button>
 
 </body>
 </html>
