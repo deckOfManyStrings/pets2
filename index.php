@@ -12,6 +12,7 @@
 
     //Create an instance of the Base class
     $f3 = Base::instance();
+    $f3->set('colors', array('pink', 'green', 'blue'));
 
     //Define a default route
     $f3->route('GET /', function() {
@@ -66,7 +67,10 @@
     }
     );
 
-
+    $f3->route('GET|POST /new-pet', function($f3) {
+        $template = new Template();
+        echo $template->render('views/new-pet.html');
+    });
 
     //Run fat free
     $f3->run();
