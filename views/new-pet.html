@@ -2,25 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <title>New Pet</title>
 </head>
 <body>
-    <label>Pet name</label>
-    <input name="petName" value="petName" >
+    <div class="container">
+        <h1>Order a Pet</h1>
+        <hr>
+        <form method="post" action="#">
+            <div class="row mx-auto w-100">
+                <div class="col">
+                    <label>Pet name</label>
+                    <input name="petName" value="">
+                </div>
+                <div class="col">
+                    <label>Pet Color</label>
 
-    <label>Pet Color</label>
-
-    <select ckass="form-control" name="pet-color" id="pet-color">
-    <option>--Select--</option>
-    <repeat group ="{{ @colors }}" value = "{{ @color }}">
-        <option>{{ @color }}</option>
-    </repeat>
-    </select>
-
-    <label>Pet type</label>
-    <input name="petType" value="petType" >
-
-    <button name="submit">Submit</button>
-
+                    <select ckass="form-control" name="pet-color" id="pet-color">
+                        <option>--Select--</option>
+                        <repeat group ="{{ @colors }}" value = "{{ @color }}">
+                            <option>{{ @color }}</option>
+                        </repeat>
+                    </select>
+                </div>
+                <div class="col">
+                    <label>Pet type</label>
+                    <input name="petType" value="">
+                </div>
+            </div>
+            <hr>
+            <div class="w-100 mx-auto text-center">
+                <button class="btn btn-primary" name="submit">Submit</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
